@@ -2,9 +2,25 @@
 body{
     background-color: plum
 }
-/* Styles for screens 600px wide and larger */
-@media screen and (min-width: 600px) {
-    body{
-        background-color: aqua;
-    }  
+
+column {
+  width: 100%;
+}
+/* Styled for screens 600px wide and larger */
+/* @media screen and (min-width: 600px) { */
+@media screen and (width > 600px) {
+  body {
+    background-color: palegreen;
+  }
+  .column {
+    float: left;
+    width: 33.33%;
+  }
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }
